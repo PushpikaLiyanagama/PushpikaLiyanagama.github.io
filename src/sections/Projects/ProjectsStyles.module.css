@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 200px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid */
+  gap: 30px; /* Space between project cards */
+  justify-items: center;
+  padding: 20px;
+}
+
+.projectCard {
+  width: 100%; /* Make sure the card takes up the full width */
+  max-width: 300px; /* Restrict the max width to a fixed value */
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  max-width: 100%; /* Ensure the image fits the container */
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  transition: transform 200ms ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.05);
+}

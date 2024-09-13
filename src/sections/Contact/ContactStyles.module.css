@@ -1,0 +1,63 @@
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-color); /* Dynamic based on theme */
+  color: var(--text-color); /* Dynamic based on theme */
+}
+
+.sectionText {
+  font-size: 1.2rem;
+  color: var(--text-muted); /* Dynamic based on theme */
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--title-color); /* Dynamic title color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.contactInfoUpperContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--card-bg); /* Adjust for better contrast */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for card */
+}
+
+.contactInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 40px;
+}
+
+a {
+  color: var(--link-color); /* Links change color dynamically */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color); /* Dynamic hover color */
+}
+
+/* Responsive Styles */
+@media (min-width: 800px) {
+  .contactInfoUpperContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+}

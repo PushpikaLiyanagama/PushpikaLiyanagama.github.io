@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  height: 100vh;
+  min-height: 500px;
+  padding: 20px; /* Add padding for smaller screens */
+
+  .hero {
+    max-width: 150px; /* Reduce hero image size on smaller screens */
+    border-radius: 50%;
+  }
+
+  span {
+    display: flex;
+    gap: 15px; /* Reduce gap between icons */
+    justify-content: center;
+
+    a {
+      margin: 0;
+
+      img {
+        width: 25px; /* Scale down icon size */
+      }
+    }
+  }
+
+  a {
+    width: fit-content;
+    align-self: center;
+  }
+
+  button {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 20px; /* Reduce the size of the color mode toggle on smaller screens */
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+.description {
+  max-width: 22ch;
+  padding: 0 10px; /* Adds padding for better spacing */
+  margin-top: 10px; /* Ensure there is spacing between the description and the elements above */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduce gap on smaller screens */
+}
+
+/* For screens larger than 800px */
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .hero {
+      max-width: 350px;
+      width: 350px;
+    }
+  }
+
+  .description {
+    margin-top: 0;
+    max-width: 24ch;
+  }
+}
+
+/* For screens larger than 1400px */
+@media (min-width: 1400px) {
+  .container {
+    .hero {
+      max-width: 400px;
+      width: 400px;
+    }
+  }
+}
